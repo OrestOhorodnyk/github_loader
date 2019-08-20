@@ -71,6 +71,14 @@ then navigate to the log directory
 ```
 cd /app/logs
 ```
+# To stop the app:
+```
+sudo docker stop github_loader
+```
+# To remove the app
+```
+sudo docker rm -f github_loader
+```
 
 # Running the app without docker
 
