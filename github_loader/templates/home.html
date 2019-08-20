@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if repos %}
+{{ pagination.links }}
+{{ pagination.info }}
+{% for repo in repos | sort(attribute='date',reverse=True)%}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <h4><a class="mr-2"> {{ repo.repo_name }} </a></h4>
+        </div>
+        <a class="article-title">Owner: {{ repo.owner }}</a>
+        <p class="article-content">size = {{ repo.size }}</p>
+        <small class="text-muted">Creation date: {{ repo.date }}</small>
+    </div>
+</article>
+{% endfor %}
+{{ pagination.links }}
+{% else %}
+<h3> No repositories to display</h3>
+{% endif %}
+{% endblock content %}
