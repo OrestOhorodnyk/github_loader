@@ -4,7 +4,7 @@ from github.Repository import Repository
 from github.GithubException import GithubException
 from github_loader import LOGGER
 
-project_file_extensions = ['py', 'css', 'html', 'Dockerfile', 'md', 'odt']
+project_file_extensions = ['py', 'css', 'html', 'Dockerfile', 'md']
 
 
 def project_files(root: str) -> list:
