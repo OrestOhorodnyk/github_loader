@@ -77,7 +77,7 @@ sudo docker stop github_loader
 ```
 # To remove the app
 ```
-sudo docker rm -f github_loader
+sudo docker rm -f github_loader:latest
 ```
 
 # Running the app without docker
